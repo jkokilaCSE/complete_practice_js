@@ -173,11 +173,92 @@ let obj2={
 }
 obj2.gender()
 
-//practice -21 workout for all concept
+//practice -21 practice session-1 workout for all concept
 // exercise:create a person object  that contains three keys :name,age, and country
 // create a function ,logData(), that uses the person object  to create  a string  in the following  format:
 //"kokila is 20 years old  and lives  in norway"
 //call the logData() function  to verify  that  it works 
+  
+let person={
+    name:"kokila",
+    age:20,
+    country:"india"
+}
+function logData(){
+    console.log(person.name+ " is "+ person.age+ " years old and lives in " + person.country)
+}
+ logData()
+
+ //practice-22 practice session-2 
+
+ //less than 6 years old --> free
+ //6 to 17 years old      --> child discount
+//18 to 26 years old --> student discount
+//27 to 66 years old --> full price
+//over 66 years old -->senior citizen discount
+//create a conditional statement (if/else/else if)thatlogs out the discount
+//the passengers will get based upon the value of theage variable
+
+let age =75
+if(age<6){
+    console.log("free")
+}
+else if(age>=6 && age<=17){
+    console.log("child discount")
+}
+else if(age>=18 && age<=26){
+    console.log("student discount")
+}
+else if(age>=27 && age<=66){
+    console.log("full price")
+}
+else {
+    console.log("senior citizen discount")
+
+}
+
+//practice-23 for loops and arrays
+//usea for loop  to log the following to the console :
+ //The 5 largest countries  in the world
+//  -China
+//  -India
+//  -United states
+//  -Indonesia
+//  -pakistan
+let largeCountries =["China","India","USA","Indonesia","pakistan"]
+
+for(let i=0;i<largeCountries.length;i++){
+    console.log("-"+largeCountries[i])
+}
+
+//practice-24 using pop() ,push(),shift(),unshift()--where shift is will remove the 1st word in the array while unshift will add theword to the 1st place
+largeCountries.pop()
+largeCountries.push("Monaco")
+largeCountries.shift()
+largeCountries.unshift("Tuvalu")
+console.log(largeCountries)
+
+//practice-25 --if it is the friday the 13th ,logout  this spooky  face:
+//use  the logical "and operator"--&&
+let dayOfMonth =13
+let weekday="Friday"
+if(dayOfMonth===13 && weekday==="Friday"){
+    console.log("😱")
+}
+
+//practice-26 --create a function  that returns  a random  item from the array
+let hands=["rock","paper","scissor"]
+console.log(hands[Math.floor(Math.random()*3)])
+
+//alternate way
+function handget(){
+    let hann=Math.floor(Math.random()*3)
+    return hands[hann]
+}
+console.log(handget())
+
+
+
 
 
 
