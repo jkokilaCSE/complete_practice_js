@@ -258,11 +258,78 @@ function handget(){
 console.log(handget())
 
 
+// difference b/w innerHTML and textContent
+// innerHTML==will change or add or modify the html contents
+// where as textContent will not it displays what you add to the js.
 
+// for(i=0;i<myLeads.length;i++){
+//     ulEl.innerHTML+="<li>"+myLeads[i]+"</li> "
+// }//this leads to add list in the html element as .www
+// in case of textContent it displays like <li> www </li>
 
+//practice-27-->template string/literals
+const recipient="james"
+let email ="hey"+ recipient+"! How is it going? cheers per"//using ordinary method
+console.log(email)
 
+email=`hey ${recipient}! How is it going? cheers per`//by using template strings
+console.log(email)
+//making more dynammic using template strings ....in template strings we can break the strings in many lines which will not give error where as normalstrings will do
+const sender ="kokila"
+email=`hey
+ ${recipient}!
+  How is it going? 
+  cheers
+   ${sender}`
+console.log(email)
+ 
+// practice-28-->localstorage...devoloper tools
+console.log(localStorage.setItem("myLeads","www.examplelead.com"))//it store set key value pair 
+console.log(localStorage.getItem("myLeads"))//if we log out this it will o/p as "www.examplelead.com"
+localStorage.clear()//if we clear this the items will clearand if we again give the above statements it will o/p as null.
 
+//stringify() takes a JavaScript object and then transforms it into a JSON string. JSON. parse() takes a JSON string and then transforms it into a JavaScript object.
+// in js the falsy values are 
+// ""
+// false
+// 0
+// null --->how you as a developer signalize emptiness
+// undefined--->how js signalizes a emptiness
+// NaN
+const credits=0
+if(credits){
+    console.log("let's play")
 
+}
+else{
+    console.log("sry!you dont haveany credits")
+}
 
+//practice-29--passing value by arguments
+const welcome = document.getElementById("welcome-el")
+function greetings(name,greets){
+    welcome.textContent=name+", kokila "+greets
+}
+greetings("greeting","welcome back")
+//practice-30 by removing all the +symbols we can add the template literals..
+const welcomes = document.getElementById("welcomes-el")
+//....parameters which always inside the functions...here(name,greets)are the parameters
+function greetins(name,greets){
+    welcomes.textContent=`${name} , kokila ${greets}`
+}
+greetins("greeting","welcome back")//......arguments always in outside the functions
+//practice-31-->add function by passing the values
+function add(a,b){
+      let c= a+b
+      return c
 
+}
+console.log(add(3,7))
+console.log(add(9,102))
+
+//practice-32 --->passing  the value not only string we can pass array as well
+function getFirst(arr){
+    return arr[0]
+}
+console.log(getFirst([1,2,3,4]))
 
